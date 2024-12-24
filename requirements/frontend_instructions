@@ -1,0 +1,56 @@
+Project overview
+- Use this guide to build a web app where users can give a text prompt to generate emoji using a model hosted on Replicate
+
+# Feature requirements
+-  We will use Next.js, Shadcn, Lucid, Supabase, Clerk.
+- Create a form where users can put in a prompt, and clicking on a button calls the Replicate model to generate emoji.
+- Have a nice UI & animation when the emoji is blank or generating.
+- Display all the images ever generated in a grid.
+- When hovering over each emoji image, an icon button for download and an icon button for like should be shown.
+
+
+# Relevant docs
+## How to use Replicate emoji generator model
+Run this model in Node.js with one line of code:
+
+npx create-replicate --model=fofr/sdxl-emoji
+
+
+# Current File Structure
+
+EMOJI-GENERATOR-CURSOR/
+├── emoji-maker/
+│   ├── .next/
+│   ├── app/
+│   │   ├── fonts/
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   └── ui/
+│   │       ├── button.tsx
+│   │       ├── card.tsx
+│   │       └── input.tsx
+│   ├── lib/
+│   ├── node_modules/
+│   ├── requirements/
+│   │   └── frontend_instructions.md
+│   ├── .eslintrc.json
+│   ├── .gitignore
+│   ├── components.json
+│   ├── next-env.d.ts
+│   ├── next.config.mjs
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.mjs
+│   ├── README.md
+│   ├── tailwind.config.ts
+│   └── tsconfig.json
+
+
+# Rules
+
+- All new components should go in /components and be named like example-component.tsx unless otherwise specified.
+- All new pages go in /app.
+- Write DETAILED comments so even a beginner can understand the code very easily. The comments should allow the reader to easily debug the code if it doesn't work. The comments to understand the code is very important. The comments should explain in simple language what exactly each part of the code does.
